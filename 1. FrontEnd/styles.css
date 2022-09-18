@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color:#f0ffff;
+    color: #000080;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23acac92' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Color para hipervinculos*/
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+ a:hover, a:focus   { 
+    Color: blueviolet; 
+    text-decoration: dotted;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    list-style: none;
+}
+
+/*Separador de Contenido*/
+hr {
+    margin: 20px 0;
+}
+
+/*Formato global de la pagina*/
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.nav-main {
+    display: flexbox;
+    align-items: stretch;
+    height: 60px;
+    padding: 20px 20px;
+}
+.nav-menu h6 {
+    display: inline;
+    float: left;
+    font-size: x-small;
+    color: darkblue;
+    padding: 10px 10px;
+}
+.nav-brand {
+    width: 50px;
+    height: 30px;
+    float: left;
+}
+
+.footer ul li {
+    display: inline;
+    text-align: center;
+    font-size: normal;   
+    height: 30px;
+    padding: 5% 5%;
+}
+
+.social ul.nav-menu-right li{
+    float: right;
+    font-size: normal;
+    padding: 1px;
+}
+/*formato globlal de los botones*/
+.btn {
+    border: none;
+    padding: 15px 0;
+    width: 100%;
+    font-weight: bolder;
+    display: block;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btnlogin{
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    font-weight: bolder;
+    display: block;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    opacity: .7;
+}
+
+/* formulario de login */
+
+.formcontainer {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    border-radius: 20px;
+    overflow: auto;
+    align-items: left;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+    display: none;
+}
+.formcontainer .logincontainer{
+    background-color: #fefefe;
+    margin: 5px auto;
+    border: 2px solid #888;
+    width: 150%;
+    color: navy;
+}
+
+.logincontainer .formulario{
+    display: grid;
+    text-align: left;
+    color: navy;
+    font-weight: bold;
+    padding: 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: solid 1px #eee;
+    border-radius: 10px;
+}
+
+.logincontainer .opciones label, 
+.logincontainer .opciones input, 
+.logincontainer .opciones a {
+    font-size: xx-small;
+    justify-content: space-between;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+  /* boton de cierre */
+  .cancel{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  /* animaciones del boton cerrar */
+  .cancel:hover,
+  .cancel:focus {
+    color: red;
+    cursor: pointer;
+  }
+
+/*imagenes de banner */
+.banner{
+    width: 100%;
+    height: 550px;
+    background: url(./img/banner5.jpg) no-repeat center center/cover;
+    border-top-left-radius: 0%  100%;
+    border-top-right-radius: 50% 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+.banner .datospersonales{
+    width: 180px;
+    height: 180px;
+    background: url(./img/perfil.jpg) no-repeat center center/cover;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+}
+.infopersonal{
+    display: inline-block;
+    block-size: 60px;
+    margin-top: 5px;
+    font-size: small;
+}
+
+.secciones{
+    display: grid;
+    grid-template-rows: repeat(4, fr);
+    grid-template-columns: 1fr;
+    font-size: medium;
+}
+.seccion-title:hover {
+    color: blueviolet !important;
+    font-style: italic;
+    text-decoration c: underline;
+
+}
+
+  /*Formato hard & soft skills*/
+  
+  .skills h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+
+  }
+  .hardSkills,
+  .softskills {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .skills .outer-box {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skills .inner-box {
+    font-size: small;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  svg {
+    position: absolute;
+  }
+  
+  circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: loading 2s linear forwards;
+  }
+  
+  @keyframes loading {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+  table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 20px;
+    border-collapse: collapse;
+    border: solid 1px navy;
+}
+td, th, thead {
+    padding: 5px;
+}
+thead {
+    border-bottom: solid 1px navy;     
+}
+
+caption{
+    text-align: left;
+    font-size: large;
+    font-style: italic;
+    text-decoration-line: underline;
+    margin: 10px;
+}
+
+tbody tr:hover{
+    background-color: #ccc !important;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1357px) {
+    .formcontainer {
+      width: 95%;
+    }
+    .formcontainer .logincontainer {
+      width: 400px;
+      margin: 0 auto;
+    }
+  
+    .formcontainer .welcome-screen-container {
+      width: 40%;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .formcontainer .logincontainer {
+      width: 400px;
+      margin: 0 auto;
+    }
+  
+    .formcontainer .welcome-screen-container {
+      width: 0%;
+    }
+  }
