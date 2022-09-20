@@ -202,8 +202,7 @@ hr {
 .seccion-title:hover {
     color: blueviolet !important;
     font-style: italic;
-    text-decoration c: underline;
-
+    text-decoration: underline;
 }
 
   /*Formato hard & soft skills*/
